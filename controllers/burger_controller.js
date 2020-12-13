@@ -22,14 +22,14 @@ router.post("/api/burgers", (req, res) => {
   );
 });
 
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
   var condition = "id = " + req.params.id;
   console.log("condition", condition);
   burger.updateOne(
     {
       devoured: true,
     },
-    consition,
+    condition,
     function (result) {
       if (result.changedRows == 0) {
         return res.status(400).end();
