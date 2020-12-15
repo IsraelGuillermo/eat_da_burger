@@ -12,17 +12,21 @@ $(function () {
   });
   $(".create-form").on("submit", function (event) {
     event.preventDefault();
-    console.log("submit button clicked");
-    var newBurger = {
-      burger_name: $("#newBurger").val().trim(),
-      devoured: 0,
-    };
-    $.ajax("/api/burgers", {
-      type: "POST",
-      data: newBurger,
-    }).then(function () {
-      console.log("New burger added");
-      location.reload();
-    });
+    if ($("#newBurger").val().trim() === "") {
+      return;
+    } else {
+      console.log("submit button clicked");
+      var newBurger = {
+        burger_name: $("#newBurger").val().trim(),
+        devoured: 0,
+      };
+      $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger,
+      }).then(function () {
+        console.log("New burger added");
+        location.reload();
+      });
+    }
   });
 });

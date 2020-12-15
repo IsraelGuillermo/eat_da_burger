@@ -1,3 +1,24 @@
 .jumbotron {
-  background-color: teal;
+  background-color: #89beb3;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #2e3c58;
+}
+
+ul {
+  background-color: #89beb3;
+  opacity: 95%;
+}
+
+h2 {
+  background-color: #89beb3;
+  opacity: 95%;
 }
