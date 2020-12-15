@@ -8,8 +8,8 @@ li {
 
 body {
   background-image: url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #89beb3;
+
   color: #2e3c58;
   font-family: "Roboto Mono", monospace;
 }
