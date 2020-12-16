@@ -13,7 +13,7 @@
 
 ![Application](./public/assets/images/deployedApp.png)
 
-![Deployed Application](https://shrouded-sands-40182.herokuapp.com/)
+[Deployed Application](https://shrouded-sands-40182.herokuapp.com/)
 <br />
 This is a full stack application. This application uses mySQL, handlebars, ORM and uses the MVC model.
 <br />
