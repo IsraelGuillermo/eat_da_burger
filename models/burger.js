@@ -1,6 +1,7 @@
 const orm = require("../config/orm.js");
 
 const burger = {
+  // all these functions assign the table as 'burgers'
   selectAll: function (cb) {
     orm.selectAll("burgers", function (res) {
       cb(res);

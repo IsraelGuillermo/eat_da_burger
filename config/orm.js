@@ -23,6 +23,7 @@ function objToSql(ob) {
 }
 
 const orm = {
+  // ORM to select all info on db
   selectAll: function (tableInput, cb) {
     //   ask tutor about declaring here.... var vs let vs const?
     var queryString = "SELECT * FROM " + tableInput + ";";
@@ -33,6 +34,7 @@ const orm = {
       cb(result);
     });
   },
+  // ORM to insert info into db
   insertOne: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -51,6 +53,7 @@ const orm = {
       cb(result);
     });
   },
+  // ORM to update info in db
   updateOne: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
     queryString += " SET ";

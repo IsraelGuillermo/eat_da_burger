@@ -1,7 +1,10 @@
+// requires express
 const express = require("express");
+// requires the file from models burger.js
 const burger = require("../models/burger.js");
 const router = express.Router();
 
+// This is the main/home path thiwh displays everything from the database
 router.get("/", (req, res) => {
   burger.selectAll(function (data) {
     var hbsObject = {
@@ -12,6 +15,7 @@ router.get("/", (req, res) => {
   });
 });
 
+// this route allows user to add/post a new burger
 router.post("/api/burgers", (req, res) => {
   burger.insertOne(
     ["burger_name", "devoured"],
@@ -22,6 +26,7 @@ router.post("/api/burgers", (req, res) => {
   );
 });
 
+// This allows the user to update from burgers to devour to devoured burgers. it is the update part of CRUD
 router.put("/api/burger/:id", (req, res) => {
   var condition = "id = " + req.params.id;
   console.log("condition", condition);
