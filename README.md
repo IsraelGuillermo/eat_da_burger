@@ -11,7 +11,7 @@
 
 ## Description
 
-![Application](./assets/images/deployedApp.png)
+![Application](./public/assets/images/deployedApp.png)
 
 ![Deployed Application](https://shrouded-sands-40182.herokuapp.com/)
 <br />
